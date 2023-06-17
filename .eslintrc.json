@@ -1,0 +1,92 @@
+{
+  "extends": ["airbnb", "next/core-web-vitals"],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "react/no-danger": "off",
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "brace-style": "off",
+    "operator-linebreak": "off",
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "guard-for-in": "off",
+    "chai-friendly/no-unused-expressions": "off",
+    "prefer-template": "error",
+    "linebreak-style": "off",
+    "prefer-destructuring": "off",
+    "comma-dangle": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
+    "react/jsx-indent": [2, 2, { "indentLogicalExpressions": true }],
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/function-component-definition": "off",
+    "react/jsx-indent-props": [2, "first"],
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": "off",
+    "react/jsx-wrap-multilines": ["error", { "declaration": false, "assignment": false }],
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "camelcase": "off",
+    "no-unused-vars": [
+      1,
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "^_|[rR]epository|[cC]ached|[rR]eporter|[dD]efault"
+      }
+    ],
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "no-use-before-define": "off",
+    "no-useless-constructor": "off",
+    "no-useless-concat": "error",
+    "no-restricted-syntax": "off",
+    "no-empty-lifecycle-method": "off",
+    "no-promise-executor-return": "off",
+    "no-shadow": "off",
+    "no-tabs": "off",
+    "no-plusplus": "off",
+    "max-len": "off",
+    "class-methods-use-this": "off",
+    "no-empty-function": ["error", { "allow": ["constructors"] }],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelAttributes": ["label"],
+        "controlComponents": ["input"]
+      }
+    ],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "no-confusing-arrow": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.test.*s",
+        "*.spec.*s",
+        "vitest.config.ts",
+        "playwright.config.ts",
+        "tailwind.config.js",
+        "bin/*stack*.ts",
+        "lib/*Stack*.ts"
+      ],
+      "rules": {
+        "chai-friendly/no-unused-expressions": "off",
+        "no-return-assign": "off",
+        "import/no-extraneous-dependencies": "off",
+        "global-require": "off"
+      }
+    },
+    {
+      "files": ["next.config.js"],
+      "rules": {
+        "import/no-import-module-exports": "off"
+      }
+    }
+  ]
+}
